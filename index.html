@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accel Analysis for Business &amp; Property Support Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How Accel Analysis supports landscaping, janitorial, waste, security, office support, and other service firms with smarter territories, better account targeting, and recurring contracts." />
+
+  <style>
+    /* --- Base Reset & Typography --- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f6f7fb;
+      color: #1a1a1a;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* --- Layout --- */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* --- Header & Navigation --- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-logo {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-brand-text {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #555;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.92rem;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: #005b8f;
+      transition: width 0.2s ease-out;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid #005b8f;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #005b8f;
+      background: #ffffff;
+      transition: all 0.2s ease-out;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-cta:hover {
+      background: #005b8f;
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 91, 143, 0.25);
+      transform: translateY(-1px);
+    }
+
+    /* --- Hero --- */
+    .hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("https://img1.wsimg.com/isteam/ip/0815fdc9-aafc-4fe1-99f8-dedc9ba0e23b/blob-02576cc.png/:/rs=w:1440,h:1440");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+      transform: scale(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 0%, rgba(0, 171, 193, 0.5) 0, transparent 60%),
+                  linear-gradient(120deg, rgba(0, 91, 143, 0.9), rgba(10, 31, 58, 0.9));
+      mix-blend-mode: soft-light;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 4.5rem 0 4rem;
+    }
+
+    .hero-tagline {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #d3e9ff;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      line-height: 1.15;
+      font-weight: 700;
+      margin: 0 0 1rem;
+    }
+
+    .hero-accent {
+      color: #66d1ff;
+    }
+
+    .hero-subtitle {
+      max-width: 560px;
+      font-size: 1.02rem;
+      color: #e9f3ff;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 0.85rem;
+      align-items: center;
+      margin-bottom: 1.75rem;
+      font-size: 0.9rem;
+      color: #c6ddff;
+    }
+
+    .hero-pill span {
+      position: relative;
+      padding-left: 1.3rem;
+    }
+
+    .hero-pill span::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #66d1ff;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.7rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #00a3e0, #0073b6);
+      color: #ffffff;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      box-shadow: 0 10px 22px rgba(0, 134, 204, 0.45);
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, filter 0.15s ease-out;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+      box-shadow: 0 14px 30px rgba(0, 134, 204, 0.6);
+    }
+
+    .btn-secondary {
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #e6f0ff;
+      font-weight: 500;
+      border: 1px solid rgba(230, 240, 255, 0.4);
+      cursor: pointer;
+      font-size: 0.9rem;
+      backdrop-filter: blur(8px);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: background 0.15s ease-out, color 0.15s ease-out, transform 0.15s ease-out;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* --- Sections --- */
+    main {
+      background: #f6f7fb;
+    }
+
+    .section {
+      padding: 3.5rem 0;
+    }
+
+    .section.alt {
+      background: #ffffff;
+    }
+
+    .section-header {
+      margin-bottom: 2.25rem;
+      text-align: left;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #777;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      margin: 0 0 0.75rem;
+      color: #162235;
+    }
+
+    .section-subtitle {
+      max-width: 640px;
+      font-size: 0.98rem;
+      color: #555;
+    }
+
+    /* --- Media --- */
+    .media-frame {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #b6c3d8;
+      background: #f0f4fb;
+    }
+
+    .media-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .media-caption {
+      padding: 0.6rem 0.9rem 0.8rem;
+      font-size: 0.82rem;
+      color: #4b5563;
+      background: #f9fbff;
+    }
+
+    /* --- Grids & Cards --- */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid rgba(13, 27, 62, 0.06);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
+      padding: 1.4rem 1.4rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .card-header-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7c8baa;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #182235;
+    }
+
+    .card-body {
+      font-size: 0.92rem;
+      color: #555;
+    }
+
+    .card-list {
+      margin: 0.35rem 0 0;
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+      color: #4b566f;
+    }
+
+    .card-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* --- Two-column feature sections --- */
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .two-column.reverse {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr);
+    }
+
+    .feature-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #0073b6;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-title {
+      font-size: 1.4rem;
+      color: #111827;
+      margin: 0 0 0.6rem;
+    }
+
+    .feature-subtitle {
+      font-size: 0.96rem;
+      color: #4b5563;
+      margin-bottom: 0.9rem;
+    }
+
+    .feature-list {
+      margin: 0.5rem 0 0.4rem;
+      padding-left: 1.1rem;
+      font-size: 0.93rem;
+      color: #4b5563;
+    }
+
+    .feature-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .feature-meta {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    /* --- Process Steps --- */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem;
+    }
+
+    .process-step {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid rgba(13, 27, 62, 0.06);
+      padding: 1.3rem 1.3rem 1.2rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+      position: relative;
+    }
+
+    .process-step-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: #005b8f;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .process-step-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+      color: #111827;
+    }
+
+    .process-step-body {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    /* --- Use Cases --- */
+    .use-cases {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.75rem;
+    }
+
+    .use-case-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #111827;
+    }
+
+    .pill-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.1rem 0.7rem;
+      border-radius: 999px;
+      background: #edf5ff;
+      color: #005b8f;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    /* --- CTA --- */
+    .cta-section {
+      text-align: center;
+    }
+
+    .cta-box {
+      background: radial-gradient(circle at top left, #e6f5ff, #f8fafc);
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 2.2rem 1.75rem 2rem;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .cta-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.7rem;
+      color: #0f172a;
+    }
+
+    .cta-subtitle {
+      max-width: 560px;
+      margin: 0 auto 1.7rem;
+      font-size: 0.97rem;
+      color: #4b5563;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.9rem;
+    }
+
+    .cta-note {
+      margin-top: 1.1rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    /* --- Footer --- */
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 1.5rem 0 1.75rem;
+      background: #ffffff;
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .two-column,
+      .two-column.reverse,
+      .grid-3,
+      .process-steps,
+      .use-cases {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-inner {
+        padding: 3.5rem 0 3.25rem;
+      }
+
+      .nav-links {
+        display: none; /* simple mobile behavior */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 1.9rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.97rem;
+      }
+
+      .cta-box {
+        padding: 1.9rem 1.4rem 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="nav-left">
+        <img
+          src="https://img1.wsimg.com/isteam/ip/0815fdc9-aafc-4fe1-99f8-dedc9ba0e23b/blob-f3ca1db.png/:/rs=w:331,h:400,cg:true,m/cr=w:331,h:400/qt=q:95"
+          alt="Accel Analysis, LLC Logo"
+          class="nav-logo"
+        />
+        <div class="nav-brand-text">
+          Accel Analysis, LLC<br />
+          <span style="font-weight:600;">Clarity. Strategy. Execution.</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#who-we-serve" class="nav-link">Who We Serve</a>
+        <a href="#territories" class="nav-link">Territories &amp; Routes</a>
+        <a href="#account-radar" class="nav-link">Account Radar</a>
+        <a href="#process" class="nav-link">How It Works</a>
+        <a href="#cta" class="nav-cta">Book a Discovery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-tagline">Industry Sector &mdash; Business &amp; Property Support Services</div>
+      <h1 class="hero-title">
+        Turn Local Routes &amp; Support Work into
+        <span class="hero-accent">Recurring, Contracted Revenue</span>
+      </h1>
+      <p class="hero-subtitle">
+        Accel Analysis helps landscaping, janitorial, waste, pest, security, office support,
+        travel, and other service firms design smarter territories, target better accounts,
+        and build simple systems for recurring work.
+      </p>
+
+      <div class="hero-pill">
+        <span>Field &amp; route-based property services</span>
+        <span>Office, admin &amp; travel support firms</span>
+        <span>Security, staffing &amp; facility-related services</span>
+      </div>
+
+      <div class="hero-actions">
+        <a
+          href="https://outlook.office.com/book/AccelAnalysis1%40NETORGFT15328873.onmicrosoft.com/s/Oru7j85iDEifvq8QNV5DjQ2?ismsaljsauthenabled="
+          class="btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book a Discovery Meeting
+        </a>
+        <a href="#who-we-serve" class="btn-secondary">
+          Explore Support Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ================= Section: Who We Serve ================= -->
+    <section class="section alt" id="who-we-serve">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Who We Serve</div>
+          <h2 class="section-title">Service Firms in Focus</h2>
+          <p class="section-subtitle">
+            The local data shows a heavy mix of firms in grounds care, building services, office
+            support, travel, staffing, and security/investigation. We’ve designed this offering
+            around those realities.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-header-label">01</div>
+            <div class="card-title">Property &amp; Grounds Services</div>
+            <div class="card-body">
+              Landscaping, lawn and tree services, outdoor maintenance, and related firms that live
+              on routes and recurring visits.
+              <ul class="card-list">
+                <li>Define tight service radiuses and route clusters</li>
+                <li>Target neighborhoods, HOAs, and commercial sites</li>
+                <li>Use campaigns to fill gaps in weekly schedules</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header-label">02</div>
+            <div class="card-title">Building &amp; Environmental Services</div>
+            <div class="card-body">
+              Janitorial and carpet cleaning, pest control, septic and waste, facility support and
+              other “keep-it-running” services.
+              <ul class="card-list">
+                <li>Identify high-value facilities and property managers</li>
+                <li>Design offers and bids for recurring contracts</li>
+                <li>Track which clients are most profitable to keep</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header-label">03</div>
+            <div class="card-title">Business Support, Travel &amp; Security</div>
+            <div class="card-body">
+              Office admin and “all other business support,” document prep, travel agencies,
+              staffing and employment firms, security and investigation.
+              <ul class="card-list">
+                <li>Clarify ideal industries and organization sizes</li>
+                <li>Map and reach decision-makers and partners</li>
+                <li>Blend local relationship-building with targeted campaigns</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Media: overview -->
+        <div style="margin-top:1.75rem;">
+          <div class="media-frame">
+            <img
+              src="https://via.placeholder.com/1120x520?text=Business+%26+Property+Support+Collage+Mock"
+              alt="Business and property support services collage mock"
+            />
+          </div>
+          <div class="media-caption">
+            Mock image &mdash; replace with a collage showing trucks and crews in the field, office
+            support at work, and a facility or commercial property backdrop.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Section: Core Value Props ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Why Support Service Firms Choose Accel</div>
+          <h2 class="section-title">Less Random Jobs, More Intentional Contracts</h2>
+          <p class="section-subtitle">
+            Many of these firms are strong operators but rely on word-of-mouth and one-off jobs.
+            We help you move toward defined territories, targeted accounts, and steadier,
+            contracted work.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">Territory &amp; Route Design</div>
+            <div class="card-body">
+              Use mapping and radius tools to define realistic service areas, tighten routes, and
+              avoid driving past opportunities.
+              <ul class="card-list">
+                <li>Draw first-ring and second-ring territories around your base</li>
+                <li>Cluster homes, buildings, and facilities into workable routes</li>
+                <li>Focus outreach where travel time is lowest and density is highest</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Account &amp; Contract Radar&#8482;</div>
+            <div class="card-body">
+              Identify and prioritize the property managers, facility directors, organizations, and
+              households most likely to need your services.
+              <ul class="card-list">
+                <li>Lists of high-potential commercial and residential accounts</li>
+                <li>Segmentation by property type, size, and service need</li>
+                <li>Simple scoring so you know who to contact first</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Recurring Client Systems</div>
+            <div class="card-body">
+              Light-weight systems to keep good clients longer and turn first-time jobs into
+              recurring revenue.
+              <ul class="card-list">
+                <li>Basic follow-up and renewal cadences</li>
+                <li>Seasonal and event-based campaigns (spring clean-ups, contract cycles, etc.)</li>
+                <li>Dashboards that show client mix and contract risk at a glance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Media: analytics -->
+        <div style="margin-top:1.75rem;">
+          <div class="media-frame">
+            <img
+              src="https://via.placeholder.com/1120x520?text=Routes+%26+Contracts+Dashboard+Mock"
+              alt="Routes and contracts dashboard mock"
+            />
+          </div>
+          <div class="media-caption">
+            Mock image &mdash; replace with a dashboard view showing territories, route density,
+            key accounts, and contract status.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Section: Territories & Routes ================= -->
+    <section class="section alt" id="territories">
+      <div class="container two-column">
+        <div>
+          <div class="feature-tag">Service Pillar</div>
+          <h2 class="feature-title">Territory &amp; Route Strategy</h2>
+          <p class="feature-subtitle">
+            For crews in trucks and vans, how you draw your map matters. We help you define service
+            areas and routes that support profitable, repeatable work instead of scattered calls.
+          </p>
+
+          <ul class="feature-list">
+            <li><strong>Service Radius Design:</strong> Right-size your primary and secondary service zones based on time, fuel, and crew capacity.</li>
+            <li><strong>Route Clustering:</strong> Group nearby homes, buildings, and facilities into tight routes that make sense on the ground.</li>
+            <li><strong>Gap-Filling:</strong> Spot “holes” in existing routes where targeted outreach could add profitable stops.</li>
+            <li><strong>Territory Hand-offs:</strong> Give each crew or team clarity on which areas they own and what success looks like there.</li>
+          </ul>
+
+          <p class="feature-meta">
+            Deliverable: a territory and route view that connects your on-the-ground reality with a
+            clear growth plan.
+          </p>
+        </div>
+
+        <div>
+          <div class="media-frame">
+            <img
+              src="https://via.placeholder.com/800x450?text=Service+Territories+Map+Mock"
+              alt="Service territories map mock"
+            />
+          </div>
+          <div class="media-caption">
+            Mock image &mdash; replace with a map showing service territories, route clusters, and
+            highlighted priority areas.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Section: Account & Contract Radar ================= -->
+    <section class="section" id="account-radar">
+      <div class="container two-column reverse">
+        <div>
+          <div class="media-frame">
+            <img
+              src="https://via.placeholder.com/800x450?text=Account+Radar+List+Mock"
+              alt="Account radar list mock"
+            />
+          </div>
+          <div class="media-caption">
+            Mock image &mdash; replace with a list or CRM-style view showing ranked accounts:
+            property managers, facilities, organizations, and neighborhoods.
+          </div>
+        </div>
+
+        <div>
+          <div class="feature-tag">Service Pillar</div>
+          <h2 class="feature-title">Account &amp; Contract Radar&#8482;</h2>
+          <p class="feature-subtitle">
+            Not every address is equal. We use data and your on-the-ground knowledge to focus your
+            attention on accounts that can anchor routes, seasons, and crews.
+          </p>
+
+          <ul class="feature-list">
+            <li><strong>Ideal Account Profiles:</strong> Define the types of properties and organizations that are the best fit for your services.</li>
+            <li><strong>Curated Lists:</strong> Build lists of property managers, facility directors, organizations, and neighborhoods matching those profiles.</li>
+            <li><strong>Outreach Patterns:</strong> Use targeted mail, email, and in-person visits to start conversations with the right people.</li>
+            <li><strong>Review &amp; Adjust:</strong> Learn from which accounts respond and refine the list each quarter.</li>
+          </ul>
+
+          <p class="feature-meta">
+            Result: less time chasing low-fit leads and more time securing the accounts that make
+            your routes and teams sustainable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Section: How It Works ================= -->
+    <section class="section alt" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">How Engagements Work</div>
+          <h2 class="section-title">Built for Owners and Operators Who Still Wear Many Hats</h2>
+          <p class="section-subtitle">
+            We keep the process simple so you and your team can stay focused on service quality and
+            operations while still moving the business forward.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-step-number">1</div>
+            <div class="process-step-title">Listen &amp; Map the Current Reality</div>
+            <div class="process-step-body">
+              We start with your services, crews, routes, current customers, and the kinds of
+              contracts you want more of. That shapes everything else.
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step-number">2</div>
+            <div class="process-step-title">Design Territories, Routes &amp; Account Radar</div>
+            <div class="process-step-body">
+              We use local data and mapping tools to draw practical territories, cluster routes, and
+              build a ranked list of target accounts and neighborhoods.
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step-number">3</div>
+            <div class="process-step-title">Launch Outreach &amp; Strengthen Systems</div>
+            <div class="process-step-body">
+              We support targeted campaigns and simple follow-up systems so you can stay in front of
+              the right people and turn first jobs into long-term work.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Section: Use Cases ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Real-World Scenarios</div>
+          <h2 class="section-title">Where This Creates Immediate Value</h2>
+          <p class="section-subtitle">
+            These are common ways business and property support firms use Accel’s support to
+            stabilize revenue and grow more intentionally.
+          </p>
+        </div>
+
+        <div class="use-cases">
+          <div>
+            <div class="pill-label">For Field &amp; Route-Based Services</div>
+            <h3 class="use-case-title">Filling Routes with the Right Stops</h3>
+            <ul class="feature-list">
+              <li>Tighten territories so crews spend more time working and less time driving.</li>
+              <li>Use targeted campaigns to add stops along existing routes.</li>
+              <li>Identify anchor accounts (complexes, facilities, neighborhoods) to build around.</li>
+              <li>Track route profitability and make adjustments with data, not guesswork.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="pill-label">For Office &amp; Support Firms</div>
+            <h3 class="use-case-title">From One-Off Jobs to Repeat Clients</h3>
+            <ul class="feature-list">
+              <li>Clarify ideal industries and organization sizes for your services.</li>
+              <li>Map and connect with complementary partners and referral sources.</li>
+              <li>Design simple sequences to stay in touch with key contacts over time.</li>
+              <li>Capture and communicate wins clearly to owners and staff.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top:1.75rem;">
+          <div class="media-frame">
+            <img
+              src="https://via.placeholder.com/1120x520?text=Crews+and+Office+Team+Collage+Mock"
+              alt="Crews and office team collage mock"
+            />
+          </div>
+          <div class="media-caption">
+            Mock image &mdash; replace with a collage showing field crews, office support staff,
+            and leadership reviewing routes or account lists.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Section: CTA ================= -->
+    <section class="section cta-section" id="cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-title">Ready to Put More Structure Behind Your Service Routes?</h2>
+          <p class="cta-subtitle">
+            Whether you run trucks and crews, an office support firm, or a blend of both, Accel
+            Analysis can help you clarify territories, focus on the right accounts, and build
+            recurring, contract-based revenue.
+          </p>
+
+          <div class="cta-actions">
+            <a
+              href="https://outlook.office.com/book/AccelAnalysis1%40NETORGFT15328873.onmicrosoft.com/s/Oru7j85iDEifvq8QNV5DjQ2?ismsaljsauthenabled="
+              class="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a Discovery Meeting
+            </a>
+            <a
+              href="https://accelanalysis.com/contact-us"
+              class="btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact Accel Analysis
+            </a>
+          </div>
+
+          <div class="cta-note">
+            Not sure which piece to tackle first? We can start with a focused territory and account
+            review around your current routes and best customers.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        &copy; <span id="year"></span> Accel Analysis, LLC. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="https://accelanalysis.com" target="_blank" rel="noopener noreferrer">AccelAnalysis.com</a>
+        <a href="https://accelanalysis.com/services-overview" target="_blank" rel="noopener noreferrer">Services Overview</a>
+        <a href="https://accelanalysis.com/contact-us" target="_blank" rel="noopener noreferrer">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
